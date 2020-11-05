@@ -1,4 +1,4 @@
-# SIN SOLUTION - LAREVEL TEST
+# SIN SOLUTION - LARAVEL TESTE
 
 Aplicação para avaliação contemplando os requisitos solicitados pelo recrutador.
 
