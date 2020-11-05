@@ -120,7 +120,7 @@ export default {
 
       let vm = this;
       let report = new Request();
-      let url = `/classroom/report/${id}`;
+      let url = `/report/classroom/${id}`;
       vm.report = await  report.reportClassroomRequest(url)
 
       let columns = [

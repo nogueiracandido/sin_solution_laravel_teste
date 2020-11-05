@@ -121,9 +121,6 @@ export default {
       report: null,
     };
   },
-  mounted() {
-    //this.createPDF()
-  },
   computed: {
     filteredRows: function () {
       var filter_name = this.filter_name.toLowerCase();
@@ -145,7 +142,7 @@ export default {
 
       let vm = this;
       let report = new Request();
-      let url = `/student/report/${id}`;
+      let url = `/report/student/${id}`;
       vm.report = await  report.reportStudentRequest(url)
 
       let columns = [

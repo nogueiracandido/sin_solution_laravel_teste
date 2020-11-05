@@ -3275,7 +3275,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               case 0:
                 vm = this;
                 report = new _service_Request__WEBPACK_IMPORTED_MODULE_1__["Request"]();
-                url = "/classroom/report/".concat(id);
+                url = "/report/classroom/".concat(id);
                 _context.next = 5;
                 return report.reportClassroomRequest(url);
 
@@ -4426,8 +4426,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       report: null
     };
   },
-  mounted: function mounted() {//this.createPDF()
-  },
   computed: {
     filteredRows: function filteredRows() {
       var filter_name = this.filter_name.toLowerCase();
@@ -4452,7 +4450,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               case 0:
                 vm = this;
                 report = new _service_Request__WEBPACK_IMPORTED_MODULE_1__["Request"]();
-                url = "/student/report/".concat(id);
+                url = "/report/student/".concat(id);
                 _context.next = 5;
                 return report.reportStudentRequest(url);
 

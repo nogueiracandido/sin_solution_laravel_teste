@@ -30,7 +30,6 @@ Route::middleware(['auth'])->group(function () {
         Route::delete('/', [App\Http\Controllers\StudentController::class, 'destroy']);
         Route::get('/create', [App\Http\Controllers\StudentController::class, 'create']);
         Route::get('/edit/{id}', [App\Http\Controllers\StudentController::class, 'edit']);
-        Route::get('/report/{id}', [App\Http\Controllers\StudentController::class, 'report']);
     });
 
     Route::prefix('adress')->group(function () {
@@ -49,7 +48,6 @@ Route::middleware(['auth'])->group(function () {
         Route::delete('/', [App\Http\Controllers\ClassroomController::class, 'destroy']);
         Route::get('/create', [App\Http\Controllers\ClassroomController::class, 'create']);
         Route::get('/edit/{id}', [App\Http\Controllers\ClassroomController::class, 'edit']);
-        Route::get('/report/{id}', [App\Http\Controllers\ClassroomController::class, 'report']);
     });
 
     Route::prefix('registration')->group(function () {
@@ -59,5 +57,10 @@ Route::middleware(['auth'])->group(function () {
         Route::delete('/', [App\Http\Controllers\RegistrationController::class, 'destroy']);
         Route::get('/create', [App\Http\Controllers\RegistrationController::class, 'create']);
         Route::get('/edit/{id}', [App\Http\Controllers\RegistrationController::class, 'edit']);
+    });
+
+    Route::prefix('report')->group(function () {
+        Route::get('/student/{id}', [App\Http\Controllers\ReportController::class, 'reportStudent']);
+        Route::get('/classroom/{id}', [App\Http\Controllers\ReportController::class, 'reportClassroom']);
     });
 });
